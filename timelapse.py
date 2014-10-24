@@ -16,7 +16,7 @@ sunset = ephem.localtime(Cambridge.next_setting(sun))
 
 while True:
     while sunrise < datetime.datetime.now() < sunset or datetime.datetime.now() < sunset < sunrise:
-        os.system('raspistill -o {}.jpg'.format(datetime.datetime.now().strftime('%y-%m-%d %H:%M')))
+        os.system('raspistill -o {}.jpg'.format(datetime.datetime.now().strftime('%y-%m-%d\ %H:%M')))
         time.sleep(1800)
     Cambridge.date = datetime.datetime.now()
 
